@@ -67,7 +67,7 @@ export default function Timeline() {
                 {/* Task Card Container */}
                 <div className="col-span-4 py-8 border-b border-white/5 relative flex items-center">
                    <div 
-                     className="absolute h-[64px] flex items-center pr-4"
+                     className="absolute h-[64px] pr-4 z-10 top-1/2 -translate-y-1/2"
                      style={{
                        left: `${((item.startWeek - 1) / 4) * 100}%`,
                        width: `${((item.endWeek - item.startWeek + 1) / 4) * 100}%`,
@@ -106,13 +106,20 @@ export default function Timeline() {
   );
 }
 
-function TimelineCard({ item, index }: { item: any; index: number }) {
+type TimelineItem = {
+  phase: string;
+  title: string;
+  startWeek: number;
+  endWeek: number;
+};
+
+function TimelineCard({ item, index }: { item: TimelineItem; index: number }) {
   return (
     <motion.div
       custom={index}
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: false, margin: "-10%" }} // Enables exit animation
+      viewport={{ once: true, margin: "0px" }}
       variants={{
         hidden: { opacity: 0, scale: 0.8, y: 30 },
         visible: (i) => ({

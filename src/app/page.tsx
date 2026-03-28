@@ -1,6 +1,7 @@
 import Hero from "../components/Hero";
 import Timeline from "../components/Timeline";
 import RocketSection from "../components/RocketSection";
+import AstronautSection from "../components/AstronautSection";
 
 export default function Home() {
   return (
@@ -8,9 +9,12 @@ export default function Home() {
       <Hero />
       <Timeline />
       <RocketSection />
-      {/* Section 4 to allow scrolling past the Rocket Section and trigger the exit animation */}
-      <section className="h-screen w-full bg-[#050505] flex flex-col items-center justify-center border-t border-white/5 relative z-10">
-        <h2 className="text-4xl md:text-6xl font-light tracking-wide text-white/50">Section 4</h2>
+      <AstronautSection />
+      
+      {/* Section 5 follows immediately after entering the helmet */}
+      <section className="h-screen w-full bg-[#050505] flex flex-col items-center justify-center relative z-20">
+        <h2 className="text-4xl md:text-6xl font-light tracking-wide text-white/50">Section 5</h2>
+        <p className="text-white/30 tracking-widest mt-4">Deep Space</p>
       </section>
     </main>
   );

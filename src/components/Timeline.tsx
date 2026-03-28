@@ -3,6 +3,17 @@
 import React from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { Orbitron, Plus_Jakarta_Sans } from "next/font/google";
+
+const orbitron = Orbitron({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "800", "900"],
+});
+
+const plusJakartaSans = Plus_Jakarta_Sans({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"],
+});
 
 const timelineData = [
   { phase: "Phase 1", title: "Logo Redesign", startWeek: 1, endWeek: 1 },
@@ -13,7 +24,7 @@ const timelineData = [
 
 export default function Timeline() {
   return (
-    <section className="relative w-full min-h-screen bg-black text-white py-24 px-6 md:px-12 lg:px-24 flex flex-col items-center overflow-hidden">
+    <section className={`relative w-full min-h-screen bg-black text-white py-24 px-6 md:px-12 lg:px-24 flex flex-col items-center overflow-hidden ${plusJakartaSans.className}`}>
       
       {/* Starry Sky Background */}
       <div className="absolute inset-0 z-0 opacity-80 pointer-events-none">
@@ -34,7 +45,7 @@ export default function Timeline() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-5xl md:text-6xl font-black tracking-tight text-white"
+            className={`${orbitron.className} text-5xl md:text-6xl font-black tracking-widest uppercase text-white`}
           >
             Timeline
           </motion.h2>

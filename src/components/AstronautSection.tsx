@@ -16,8 +16,8 @@ export default function AstronautSection() {
   // At 1000vw wide, the astronaut helmet completely fills the screen
   const width = useTransform(
     scrollYProgress,
-    [0,     0.4,    0.75,    1.0],
-    ["50vw", "300vw", "1000vw", "20000vw"]
+    [0, 0.4, 0.75, 1.0],
+    ["50vw", "300vw", "1000vw", "12500vw"]
   );
 
   // Fade out image once helmet fills the screen — black bg shows through naturally
@@ -52,6 +52,7 @@ export default function AstronautSection() {
           the image grows. The static translate(-45%, -30%) is always relative to the CURRENT
           image dimensions, so the helmet stays at viewport center at every size.
         */}
+        {/* Desktop Version */}
         <motion.img
           src="/float astrounaut.png"
           alt="Floating Astronaut"
@@ -66,7 +67,25 @@ export default function AstronautSection() {
             height: "auto",
             zIndex: 10,
           }}
-          className="select-none pointer-events-none block max-w-none"
+          className="hidden md:block select-none pointer-events-none max-w-none"
+        />
+
+        {/* Mobile Version: Offset adjusted (-24%) to move the image further up on small screens */}
+        <motion.img
+          src="/float astrounaut.png"
+          alt="Floating Astronaut"
+          draggable={false}
+          transformTemplate={() => `translate(-44%, -24%)`}
+          style={{
+            width,
+            opacity: imageOpacity,
+            position: "absolute",
+            top: "50%",
+            left: "50%",
+            height: "auto",
+            zIndex: 10,
+          }}
+          className="block md:hidden select-none pointer-events-none max-w-none"
         />
       </div>
     </section>

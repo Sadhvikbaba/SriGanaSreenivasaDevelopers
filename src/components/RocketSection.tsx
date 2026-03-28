@@ -52,8 +52,8 @@ export default function RocketSection() {
       
       {/* Sticky container to lock the text in the center of the viewport while scrolling the 300vh container */}
       <div className="sticky top-0 w-full h-screen flex items-center justify-center overflow-hidden">
-        <h2 className={`${orbitron.className} text-white/10 text-6xl md:text-9xl font-black uppercase tracking-widest pointer-events-none text-center`}>
-          Services
+        <h2 className={`${orbitron.className} text-white/10 text-6xl md:text-9xl font-black uppercase tracking-widest pointer-events-none text-center py-2`}>
+          Our Services
         </h2>
       </div>
 

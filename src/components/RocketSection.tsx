@@ -3,6 +3,12 @@
 import { useRef } from "react";
 import Image from "next/image";
 import { motion, useScroll, useTransform } from "framer-motion";
+import { Orbitron } from "next/font/google";
+
+const orbitron = Orbitron({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "800", "900"],
+});
 
 export default function RocketSection() {
   const containerRef = useRef<HTMLElement>(null);
@@ -28,15 +34,26 @@ export default function RocketSection() {
   return (
     <section 
       ref={containerRef} 
-      className="relative w-full h-[200vh] bg-black border-t border-white/5"
+      className="relative w-full h-[150vh] bg-black border-t border-white/5"
     >
+      {/* Starry Sky Background */}
+      <div className="absolute inset-0 z-0 opacity-80 pointer-events-none">
+        <Image
+          src="/starry sky 3.png"
+          alt="Stars Background"
+          fill
+          className="object-cover float"
+          priority
+        />
+      </div>
+
       {/* Background decoration for the section */}
-      <div className="absolute inset-0 pointer-events-none opacity-20 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.1)_0%,transparent_100%)]" />
+      <div className="absolute inset-0 pointer-events-none opacity-20 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.1)_0%,transparent_100%)] z-0" />
       
       {/* Sticky container to lock the text in the center of the viewport while scrolling the 300vh container */}
       <div className="sticky top-0 w-full h-screen flex items-center justify-center overflow-hidden">
-        <h2 className="text-white/10 text-6xl md:text-9xl font-black uppercase tracking-widest pointer-events-none text-center">
-          Liftoff
+        <h2 className={`${orbitron.className} text-white/10 text-6xl md:text-9xl font-black uppercase tracking-widest pointer-events-none text-center`}>
+          Services
         </h2>
       </div>
 

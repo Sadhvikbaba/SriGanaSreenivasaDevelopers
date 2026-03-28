@@ -2,6 +2,7 @@
 
 import React from "react";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 const timelineData = [
   { phase: "Phase 1", title: "Logo Redesign", startWeek: 1, endWeek: 1 },
@@ -12,8 +13,20 @@ const timelineData = [
 
 export default function Timeline() {
   return (
-    <section className="w-full min-h-screen bg-black text-white py-24 px-6 md:px-12 lg:px-24 flex flex-col items-center">
-      <div className="max-w-[1200px] w-full">
+    <section className="relative w-full min-h-screen bg-black text-white py-24 px-6 md:px-12 lg:px-24 flex flex-col items-center overflow-hidden">
+      
+      {/* Starry Sky Background */}
+      <div className="absolute inset-0 z-0 opacity-80 pointer-events-none">
+        <Image
+          src="/starry sky 3.png"
+          alt="Stars Background"
+          fill
+          className="object-cover float"
+          priority
+        />
+      </div>
+
+      <div className="max-w-[1200px] w-full relative z-10">
         
         {/* Header */}
         <div className="flex justify-between items-end mb-16">

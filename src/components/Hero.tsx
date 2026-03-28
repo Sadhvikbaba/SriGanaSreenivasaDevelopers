@@ -46,7 +46,7 @@ export default function Hero() {
           src="/starry sky 3.png"
           alt="Stars Background"
           fill
-          className="object-cover opacity-90"
+          className="object-cover opacity-90 float"
           priority
         />
       </motion.div>

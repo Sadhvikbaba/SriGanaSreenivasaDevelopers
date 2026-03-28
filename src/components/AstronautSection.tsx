@@ -2,6 +2,7 @@
 
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
+import Image from "next/image";
 
 export default function AstronautSection() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -23,8 +24,18 @@ export default function AstronautSection() {
   const imageOpacity = useTransform(scrollYProgress, [0.95, 1], [1, 0]);
 
   return (
-    <section ref={containerRef} className="h-[200vh] w-full relative">
+    <section ref={containerRef} className="h-[200vh] w-full relative bg-black overflow-hidden">
       <div className="sticky top-0 w-full h-screen">
+        {/* Starry Sky Background */}
+        <div className="absolute inset-0 z-0 opacity-80 pointer-events-none">
+          <Image
+            src="/starry sky 3.png"
+            alt="Stars Background"
+            fill
+            className="object-cover float"
+            priority
+          />
+        </div>
         {/*
           APPROACH: Position the image absolutely at viewport center (top:50%, left:50%).
           
@@ -53,6 +64,7 @@ export default function AstronautSection() {
             top: "50%",
             left: "50%",
             height: "auto",
+            zIndex: 10,
           }}
           className="select-none pointer-events-none block max-w-none"
         />

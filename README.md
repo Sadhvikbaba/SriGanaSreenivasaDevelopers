@@ -12,4 +12,8 @@ Innovation (Robot + Astronaut 🤖)
 ↓
 Vision (Astronaut 🌌)
 ↓
+testimonials (cards 👥)
+↓
+pricing (table 📊)
+↓
 Contact 📞

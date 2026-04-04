@@ -10,6 +10,13 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  /* New ChatGPT suggested theme colors */
+  --color-space-bg: #05070D;
+  --color-space-secondary: #0B0F1A;
+  --color-space-card: #111827;
+  --color-neon-purple: #7C3AED;
+  --color-neon-blue: #3B82F6;
+  --color-neon-cyan: #22D3EE;
 }
 
 @media (prefers-color-scheme: dark) {

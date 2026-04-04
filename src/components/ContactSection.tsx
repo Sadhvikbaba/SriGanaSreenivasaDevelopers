@@ -13,20 +13,20 @@ const plusJakartaSans = Plus_Jakarta_Sans({
 
 export default function ContactSection() {
   return (
-    <section className={`min-h-screen lg:h-screen lg:max-h-[1000px] w-full bg-[#050505] flex flex-col items-center justify-center py-16 lg:py-8 px-4 sm:px-6 md:px-8 relative z-20 ${plusJakartaSans.className}`}>
+    <section className={`min-h-screen lg:h-screen lg:max-h-[1000px] w-full bg-space-bg flex flex-col items-center justify-center py-16 lg:py-8 px-4 sm:px-6 md:px-8 relative z-20 ${plusJakartaSans.className}`}>
       
       {/* Header */}
       <div className="text-center mb-8">
-        <h2 className={`${orbitron.className} text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-2 text-[#e2e2e2]`}>
-          Get in <span className="bg-gradient-to-r from-[#9b51e0] to-[#c792ea] text-transparent bg-clip-text">touch</span>
+        <h2 className={`${orbitron.className} text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-2 text-white/90`}>
+          Get in <span className="bg-gradient-to-r from-neon-purple to-neon-cyan text-transparent bg-clip-text">touch</span>
         </h2>
-        <p className="text-[#a0a0a5] text-[15px] md:text-lg max-w-2xl mx-auto">
+        <p className="text-gray-400 text-[15px] md:text-lg max-w-2xl mx-auto">
           Reach out, and let's create a universe of possibilities together!
         </p>
       </div>
 
       {/* Main Card */}
-      <div className="w-full max-w-[1200px] bg-[#111116] rounded-[2rem] p-6 sm:p-8 md:p-10 flex flex-col lg:flex-row gap-8 lg:gap-12 shadow-2xl relative overflow-hidden ring-1 ring-white/5">
+      <div className="w-full max-w-[1200px] bg-space-card rounded-[2rem] p-6 sm:p-8 md:p-10 flex flex-col lg:flex-row gap-8 lg:gap-12 shadow-2xl relative overflow-hidden ring-1 ring-white/5">
         
         {/* Left Side: Form */}
         <div className="flex-1 flex flex-col justify-center order-2 lg:order-1">
@@ -34,7 +34,7 @@ export default function ContactSection() {
             <h3 className={`${orbitron.className} text-2xl md:text-3xl lg:text-3xl xl:text-[32px] font-semibold text-white mb-3 leading-tight tracking-wide`}>
               Let's connect constellations
             </h3>
-            <p className="text-[#a0a0a5] text-sm md:text-[15px] leading-relaxed max-w-lg">
+            <p className="text-gray-400 text-sm md:text-[15px] leading-relaxed max-w-lg">
               Let's align our constellations! Reach out and let the magic of collaboration illuminate our skies.
             </p>
           </div>
@@ -44,38 +44,38 @@ export default function ContactSection() {
               <input 
                 type="text" 
                 placeholder="Last Name" 
-                className="w-full bg-[#181820] text-white border border-white/5 rounded-xl px-4 py-3 focus:outline-none focus:border-[#9b51e0] focus:ring-1 focus:ring-[#9b51e0] transition-all placeholder:text-[#6a6a75] text-[15px]"
+                className="w-full bg-space-secondary text-white border border-white/5 rounded-xl px-4 py-3 focus:outline-none focus:border-neon-purple focus:ring-1 focus:ring-neon-purple transition-all placeholder:text-gray-500 text-[15px]"
               />
               <input 
                 type="text" 
                 placeholder="First Name" 
-                className="w-full bg-[#181820] text-white border border-white/5 rounded-xl px-4 py-3 focus:outline-none focus:border-[#9b51e0] focus:ring-1 focus:ring-[#9b51e0] transition-all placeholder:text-[#6a6a75] text-[15px]"
+                className="w-full bg-space-secondary text-white border border-white/5 rounded-xl px-4 py-3 focus:outline-none focus:border-neon-purple focus:ring-1 focus:ring-neon-purple transition-all placeholder:text-gray-500 text-[15px]"
               />
             </div>
             
             <input 
               type="email" 
               placeholder="Email" 
-              className="w-full bg-[#181820] text-white border border-white/5 rounded-xl px-4 py-3 focus:outline-none focus:border-[#9b51e0] focus:ring-1 focus:ring-[#9b51e0] transition-all placeholder:text-[#6a6a75] text-[15px]"
+              className="w-full bg-space-secondary text-white border border-white/5 rounded-xl px-4 py-3 focus:outline-none focus:border-neon-purple focus:ring-1 focus:ring-neon-purple transition-all placeholder:text-gray-500 text-[15px]"
             />
             
             <input 
               type="tel" 
               placeholder="Phone Number" 
-              className="w-full bg-[#181820] text-white border border-white/5 rounded-xl px-4 py-3 focus:outline-none focus:border-[#9b51e0] focus:ring-1 focus:ring-[#9b51e0] transition-all placeholder:text-[#6a6a75] text-[15px]"
+              className="w-full bg-space-secondary text-white border border-white/5 rounded-xl px-4 py-3 focus:outline-none focus:border-neon-purple focus:ring-1 focus:ring-neon-purple transition-all placeholder:text-gray-500 text-[15px]"
             />
             
             <textarea 
               placeholder="Message" 
               rows={3}
-              className="w-full bg-[#181820] text-white border border-white/5 rounded-xl px-4 py-3 focus:outline-none focus:border-[#9b51e0] focus:ring-1 focus:ring-[#9b51e0] transition-all placeholder:text-[#6a6a75] text-[15px] resize-none"
+              className="w-full bg-space-secondary text-white border border-white/5 rounded-xl px-4 py-3 focus:outline-none focus:border-neon-purple focus:ring-1 focus:ring-neon-purple transition-all placeholder:text-gray-500 text-[15px] resize-none"
             ></textarea>
 
             <button 
               type="button" 
-              className="w-full mt-2 bg-gradient-to-r from-[#903aff] to-[#a35cf5] hover:from-[#9b51e0] hover:to-[#b370f8] text-white font-medium py-3 rounded-xl transition-all duration-300 transform hover:scale-[1.01] active:scale-[0.98] shadow-[0_0_20px_rgba(144,58,255,0.2)] flex items-center justify-center gap-2 text-[15px]"
+              className={`${orbitron.className} uppercase tracking-wider w-full mt-2 bg-gradient-to-r from-neon-purple to-neon-blue hover:to-neon-cyan text-white font-bold py-4 rounded-xl transition-all duration-300 transform hover:scale-[1.01] active:scale-[0.98] shadow-[0_0_20px_rgba(124,58,237,0.3)] flex items-center justify-center gap-2 text-sm md:text-base`}
             >
-              Send it to the moon 🚀
+              Send it to the moon
             </button>
           </form>
         </div>
@@ -91,11 +91,11 @@ export default function ContactSection() {
             priority
           />
           {/* Dark gradient overlay for text readability */}
-          <div className="absolute inset-x-0 bottom-0 h-3/5 bg-gradient-to-t from-[#0a0a0f] via-[#0a0a0f]/60 to-transparent"></div>
+          <div className="absolute inset-x-0 bottom-0 h-3/5 bg-gradient-to-t from-space-card via-space-card/60 to-transparent"></div>
           
           <div className="absolute flex flex-col bottom-0 left-0 w-full p-6 md:p-8 text-white z-10">
-            <p className="text-[#c4c4c8] text-sm leading-relaxed mb-3">
-              "Two lunar months revealed Earth's fragile beauty against vast silence, transforming my view of our place in the universe.
+            <p className="text-gray-300 text-sm leading-relaxed mb-3">
+              "Two lunar months revealed Earth's fragile beauty against vast silence, transforming my view of our place in the universe."
             </p>
             <p className="text-white font-medium text-[15px]">
               Irinel Traista

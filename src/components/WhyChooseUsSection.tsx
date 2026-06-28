@@ -14,7 +14,7 @@ const plusJakarta = Plus_Jakarta_Sans({
   subsets: ["latin"],
   weight: ["300", "400", "500", "600"],
 });
-
+// commit
 export default function WhyChooseUsSection() {
   const containerRef = useRef<HTMLElement>(null);
   
